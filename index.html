@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+        href="data:image/png;base64,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">
+    <title>SEO res</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="(max-width:410px)" href="xiaomi.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <nav>
+        <section>
+            <div class="logo"> <a href="#">SEO <i class='bx bx-search-alt'></i></a></div>
+            <div class="info">
+                <input id="menu-toggle" type="checkbox" />
+                <label class='menu-button-container' for="menu-toggle">
+                    <div class='menu-button'></div>
+                </label>
+                <ul class="menu">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#case-study">CASE STUDY</a></li>
+                    <li><a href="#pricing">PRICING</a></li>
+                    <li><a href="#ourteam">OUR TEAM</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><button>Free Seo Analysis</button></li>
+                </ul>
+            </div>
+        </section>
+    </nav>
+
+    <header>
+        <section>
+            <div class="text">
+                <h1>WE ARE</h1>
+                <ul class="animation-text">
+                    <li><span>HAPPY TO SEE YOU</span></li>
+                    <li><span>BEST SEO ANGENCY</span></li>
+                    <li><span>ALWAYS ON TOP</span></li>
+                    <li><span>A GREAT TEAM</span></li>
+                </ul>
+            </div>
+            <img src="http://homework.webmyidea.com/assets/images/hero-img.png">
+        </section>
+    </header>
+
+    <span id="services"></span>
+
+    <article>
+        <section>
+            <div class="h1">
+                <h1>Services We Provide</h1>
+            </div>
+            <div class="posters">
+                <article class="poster1">
+                    <img src="http://homework.webmyidea.com/assets/images/services/service-icon-1.png" alt="">
+                    <h2>Design</h2>
+                    <p>Pellentesque eget velit tempus, porta ante eu, consectetur augue nunc mollis tincidunt felis
+                        porta ante eu.</p>
+                </article>
+                <article class="poster2">
+                    <img src="http://homework.webmyidea.com/assets/images/services/service-icon-2.png" alt="">
+                    <h2>Development</h2>
+                    <p>Pellentesque eget velit tempus, porta ante eu, consectetur augue nunc mollis tincidunt felis
+                        porta ante eu.</p>
+                </article>
+                <article class="poster3">
+                    <img src="http://homework.webmyidea.com/assets/images/services/service-icon-3.png" alt="">
+                    <h2>Online Marketing</h2>
+                    <p>Pellentesque eget velit tempus, porta ante eu, consectetur augue nunc mollis tincidunt felis
+                        porta ante eu.</p>
+                </article>
+            </div>
+        </section>
+    </article>
+
+    <span id="about"></span>
+
+    <div class="about-us">
+        <section>
+            <div>
+                <div class="h1">
+                    <h1>How well do you know Search Engine Watch?</h1>
+                </div>
+                <p>Following the success of our previous Easter trivia quiz, we decided to mix it up again this Friday
+                    with
+                    another quiz - this time testing how well you've been paying attention to the content we've been
+                    publishing on Search Engine Watch this week All of our questions (bar one, for fun!) are drawn from
+                    the
+                    past week's worth of content, including last week's search news roundup. So brush up and give it
+                    your
+                    best shot!</p>
+                <a href="#">Load more</a>
+            </div>
+            <img src="http://homework.webmyidea.com/assets/images/object1.png" alt="">
+        </section>
+    </div>
+
+    <span id="case-study"></span>
+
+    <div class="seo">
+        <section>
+            <div class="h1">
+                <h1>SEO Case Studies</h1>
+            </div>
+            <div class="seo-flex">
+                <div class="bg-overlay">
+                    <img src="http://homework.webmyidea.com/assets/images/case/1.jpg" alt="">
+                    <div class="overlay">
+                        <hr class="to-down">
+                        <a href="#">Search Engine Optimize</a>
+                        <h3>SEO, SMM</h3>
+                        <hr class="to-up">
+                    </div>
+                </div>
+                <div class="bg-overlay">
+                    <img src="http://homework.webmyidea.com/assets/images/case/2.jpg" alt="">
+                    <div class="overlay">
+                        <hr class="to-down">
+                        <a href="#">Search Engine Optimize</a>
+                        <h3>SEO, SMM</h3>
+                        <hr class="to-up">
+                    </div>
+                </div>
+                <div class="bg-overlay">
+                    <img src="http://homework.webmyidea.com/assets/images/case/3.jpg" alt="">
+                    <div class="overlay">
+                        <hr class="to-down">
+                        <a href="#">Search Engine Optimize</a>
+                        <h3>SEO, SMM</h3>
+                        <hr class="to-up">
+                    </div>
+                </div>
+                <div class="bg-overlay">
+                    <img src="http://homework.webmyidea.com/assets/images/case/4.jpg" alt="">
+                    <div class="overlay">
+                        <hr class="to-down">
+                        <a href="#">Search Engine Optimize</a>
+                        <h3>SEO, SMM</h3>
+                        <hr class="to-up">
+                    </div>
+                </div>
+                <div class="bg-overlay">
+                    <img src="http://homework.webmyidea.com/assets/images/case/5.jpg" alt="">
+                    <div class="overlay">
+                        <hr class="to-down">
+                        <a href="#">Search Engine Optimize</a>
+                        <h3>SEO, SMM</h3>
+                        <hr class="to-up">
+                    </div>
+                </div>
+                <div class="bg-overlay">
+                    <img src="http://homework.webmyidea.com/assets/images/case/6.jpg" alt="">
+                    <div class="overlay">
+                        <hr class="to-down">
+                        <a href="#">Search Engine Optimize</a>
+                        <h3>SEO, SMM</h3>
+                        <hr class="to-up">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <span id="pricing"></span>
+
+    <div class="prici">
+        <section>
+            <div class="h1">
+                <h1>Pricing Plans</h1>
+            </div>
+            <div class="clouds">
+                <div class="container con1">
+                    <div class="drow-cloud">
+                        <h4>STANDARD</h4>
+                        <div class="cloud1"></div>
+                        <div class="cloud2"></div>
+                        <div class="circle-shadow"></div>
+                        <div class="circle">
+                            <h5>$10.00</h5>
+                            <span>/month</span>
+                        </div>
+                    </div>
+                    <i class='bx bx-check-circle'><span>50GB Disk Space</span></i> <br>
+                    <i class='bx bx-check-circle'><span>50 Email Accounts</span></i> <br>
+                    <i class='bx bx-check-circle'><span>50GB Monthly Bandwidth</span></i> <br>
+                    <i class='bx bx-x'></i> <br>
+                    <i class='bx bx-x'></i>
+                    <button>SING UP</button>
+                </div>
+
+                <div class="container con2">
+                    <div class="drow-cloud">
+                        <h4>BUSINESS</h4>
+                        <div class="cloud1"></div>
+                        <div class="cloud2"></div>
+                        <div class="circle-shadow"></div>
+                        <div class="circle">
+                            <h5>$20.00</h5>
+                            <span>/month</span>
+                        </div>
+                    </div>
+                    <i class='bx bx-check-circle'><span>50GB Disk Space</span></i> <br>
+                    <i class='bx bx-check-circle'><span>50 Email Accounts</span></i> <br>
+                    <i class='bx bx-check-circle'><span>50GB Monthly Bandwidth</span></i> <br>
+                    <i class='bx bx-check-circle'><span>15 Subdomains</span></i> <br>
+                    <i class='bx bx-x'></i>
+                    <button>SING UP</button>
+                </div>
+
+                <div class="container con3">
+                    <div class="drow-cloud">
+                        <h4>GOLD</h4>
+                        <div class="cloud1"></div>
+                        <div class="cloud2"></div>
+                        <div class="circle-shadow"></div>
+                        <div class="circle">
+                            <h5>$50.00</h5>
+                            <span>/month</span>
+                        </div>
+                    </div>
+                    <i class='bx bx-check-circle'><span>50GB Disk Space</span></i> <br>
+                    <i class='bx bx-check-circle'><span>50 Email Accounts</span></i> <br>
+                    <i class='bx bx-check-circle'><span>50GB Monthly Bandwidth</span></i> <br>
+                    <i class='bx bx-check-circle'><span>15 Subdomains</span></i> <br>
+                    <i class='bx bx-check-circle'><span>Life time gurrenty</span></i>
+                    <button>SING UP</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <span id="ourteam"></span>
+    
+    <main>
+        <section>
+            <div class="grid">
+                <div class="item">
+                    <div class="h1">
+                        <h1>Teamwork Makes the Dream Work</h1>
+                    </div>
+                    <p>Ut blandit sem vitae ipsum vestibulum finibus. Pellentesque habitant morbi tristique senectus
+                    </p>
+                </div>
+                <div class="item item2">
+                    <img src="http://homework.webmyidea.com/assets/images/team/team-member-1.jpg" alt="">
+                    <h6>Steve Johnson</h6>
+                    <p>Chief Exicutive Officer</p>
+                </div>
+                <div class="item item3">
+                    <img src="http://homework.webmyidea.com/assets/images/team/team-member-2.jpg" alt="">
+                    <h6>Olivia Jackson</h6>
+                    <p>Chief Operating Officer</p>
+                </div>
+                <div class="item item4">
+                    <img src="http://homework.webmyidea.com/assets/images/team/team-member-3.jpg" alt="">
+                    <h6>Tamerlan Aziev</h6>
+                    <p>Chief Technology Officer</p>
+                </div>
+                <div class="item item5">
+                    <img src="http://homework.webmyidea.com/assets/images/team/team-member-4.jpg" alt="">
+                    <h6>Silvia Perry</h6>
+                    <p>Head of Marketing</p>
+                </div>
+                <div class="item item6">
+                    <img src="http://homework.webmyidea.com/assets/images/team/team-member-5.jpg" alt="">
+                    <h6>John Kenny</h6>
+                    <p>Senior Design Strategist</p>
+                </div>
+                <div class="item item7">
+                    <img src="http://homework.webmyidea.com/assets/images/team/team-member-6.jpg" alt="">
+                    <h6>David Schwimmer</h6>
+                    <p>Web Developer</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <aside>
+        <section>
+            <img src="http://homework.webmyidea.com/assets/images/client/client-1.png">
+            <img src="http://homework.webmyidea.com/assets/images/client/client-2.png">
+            <img src="http://homework.webmyidea.com/assets/images/client/client-3.png">
+            <img src="http://homework.webmyidea.com/assets/images/client/client-2.png">
+            <img src="http://homework.webmyidea.com/assets/images/client/client-1.png">
+            <img src="http://homework.webmyidea.com/assets/images/client/client-2.png">
+        </section>
+    </aside>
+    
+    <div class="testimontial">
+        <section>
+            <div class="h1">
+                <h1>Testimonial</h1>
+            </div>
+            <div class="moving-clouds">
+                <div class="con move1">
+                    <div class="rec1">
+                        <i class='bx bxs-quote-left'></i>
+                    </div>
+                    <div class="rec2">
+                        <p>Lorem ipsum dolor sit <br>
+                            amet, consectetur <br>
+                            adipisicing elit.consectetur <br>
+                            adipisicing elit.</p>
+                    </div>
+                    <div class="line"></div>
+                    <h3>WILLIAMSON</h3>
+                    <h4>Web Developer</h4>
+                </div>
+                <div class="con move2">
+                    <div class="rec1">
+                        <i class='bx bxs-quote-left'></i>
+                    </div>
+                    <div class="rec2">
+                        <p>Lorem ipsum dolor sit <br>
+                            amet, consectetur <br>
+                            adipisicing elit.consectetur <br>
+                            adipisicing elit.</p>
+                    </div>
+                    <div class="line"></div>
+                    <h3>KRISTINA</h3>
+                    <h4>Web DeSIGNER</h4>
+                </div>
+                <div class="con move3">
+                    <div class="rec1">
+                        <i class='bx bxs-quote-left'></i>
+                    </div>
+                    <div class="rec2">
+                        <p>Lorem ipsum dolor sit <br>
+                            amet, consectetur <br>
+                            adipisicing elit.consectetur <br>
+                            adipisicing elit.</p>
+                    </div>
+                    <div class="line"></div>
+                    <h3>MARTIN LI</h3>
+                    <h4>Web Developer</h4>
+                </div>
+                <div class="con move4">
+                    <div class="rec1">
+                        <i class='bx bxs-quote-left'></i>
+                    </div>
+                    <div class="rec2">
+                        <p>Lorem ipsum dolor sit <br>
+                            amet, consectetur <br>
+                            adipisicing elit.consectetur <br>
+                            adipisicing elit.</p>
+                    </div>
+                    <div class="line"></div>
+                    <h3>JONES LAM<i class="fab fa-lamp-desk"></i></h3>
+                    <h4>Web Developer</h4>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <div class="check-box">
+        <a href="#"><div class="check1"></div></a>
+        <a href="#"><div class="check2"></div></a>
+    </div>
+
+    <span id="contact"></span>
+
+    <div class="free">
+        <section>
+            <div class="grid1">
+                <div class="text-h1">
+                    <div class="h1">
+                        <h1>Get a Free Quote</h1>
+                    </div>
+                </div>
+                <div class="input1">
+                    <input type="text" placeholder="Name">
+                </div>
+                <div class="input2">
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="input3">
+                    <input type="text" placeholder="Phone">
+                </div>
+                <div class="input4">
+                    <input type="text" placeholder="Website">
+                </div>
+                <div class="text-area">
+                    <textarea name="" id="" cols="70" rows="5" placeholder="Message"></textarea>
+                </div>
+                <div class="button">
+                    <button>GET A QUOTE</button>
+                </div>
+                <div class="call-info">
+                    <h2>Follow As : </h2>
+                    <div class="icons">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="https://www.linkedin.com/in/tasnem-kanakriah"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    
+    <footer class="contact">
+        <section>
+            <div>
+                <h1>Address</h1>
+                <p>868 S. La Sierra Drive</p>
+            </div>
+            <div>
+                <h1>Email</h1>
+                <a href="#">info@companyname.com</a>
+            </div>
+            <div>
+                <h1>Phone</h1>
+                <a href="#">+1 (222) 400-5555</a>
+            </div>
+            <div>
+                <a href="#">Contact Us</a>
+            </div>
+        </section>
+    </footer>
+
+    <footer class="copyrights">
+        <section>
+            <div>
+                <p>&#169; 2018. All eights rederved.</p>
+            </div>
+            <div>
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.linkedin.com/in/tasnem-kanakriah"><i class='bx bxl-linkedin'></i></a>
+            </div>
+            <div>
+                <a href="#">Privacy Policy </a> -
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </section>
+    </footer>
+
+
+    <div class="arrow"> 
+        <a href="#"><i class='bx bx-up-arrow-alt'></i></a> 
+    </div>
+
+
+</body>
+
+</html>
